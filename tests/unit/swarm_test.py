@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 
 import json
+import pytest
 
 from . import fake_api
 from ..helpers import requires_api_version
 from .api_test import BaseAPIClientTest, url_prefix, fake_request
 
-
+@pytest.mark.skipif(True, reason="Swarm tests aren't supported")
 class SwarmTest(BaseAPIClientTest):
     @requires_api_version('1.24')
     def test_node_update(self):
