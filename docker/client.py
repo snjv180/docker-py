@@ -138,11 +138,7 @@ class DockerClient(object):
 
     @property
     def swarm(self):
-        """
-        An object for managing a swarm on the server. See the
-        :doc:`swarm documentation <swarm>` for full details.
-        """
-        return Swarm(client=self)
+	pass
 
     @property
     def volumes(self):

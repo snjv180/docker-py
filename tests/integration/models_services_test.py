@@ -6,7 +6,7 @@ import pytest
 from .. import helpers
 from .base import TEST_API_VERSION
 
-
+@pytest.mark.skipif(True, reason="Service tests aren't supported")
 class ServiceTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

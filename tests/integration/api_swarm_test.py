@@ -5,7 +5,7 @@ import pytest
 from ..helpers import force_leave_swarm, requires_api_version
 from .base import BaseAPIIntegrationTest
 
-
+@pytest.mark.skipif(True, reason="Swarm tests aren't supported")
 class SwarmTest(BaseAPIIntegrationTest):
     def setUp(self):
         super(SwarmTest, self).setUp()

@@ -98,11 +98,9 @@ class Swarm(Model):
 
     def join(self, *args, **kwargs):
         return self.client.api.join_swarm(*args, **kwargs)
-    join.__doc__ = APIClient.join_swarm.__doc__
 
     def leave(self, *args, **kwargs):
         return self.client.api.leave_swarm(*args, **kwargs)
-    leave.__doc__ = APIClient.leave_swarm.__doc__
 
     def reload(self):
         """

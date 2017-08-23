@@ -8,7 +8,7 @@ from ..helpers import requires_api_version
 
 SSHFS = 'vieux/sshfs:latest'
 
-
+@pytest.mark.skipif(True, reason="Plugin Tests aren't supported - FIXME")
 @requires_api_version('1.25')
 class PluginTest(BaseAPIIntegrationTest):
     @classmethod

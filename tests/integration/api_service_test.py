@@ -2,6 +2,7 @@
 
 import random
 import time
+import pytest
 
 import docker
 import six
@@ -11,7 +12,7 @@ from ..helpers import (
 )
 from .base import BaseAPIIntegrationTest, BUSYBOX
 
-
+@pytest.mark.skipif(True, reason="Service tests aren't supported")
 class ServiceTest(BaseAPIIntegrationTest):
     def setUp(self):
         super(ServiceTest, self).setUp()

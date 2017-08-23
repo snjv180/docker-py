@@ -6,7 +6,7 @@ import pytest
 from ..helpers import force_leave_swarm, requires_api_version
 from .base import BaseAPIIntegrationTest
 
-
+@pytest.mark.skipif(True, reason="Secret tests aren't supported")
 @requires_api_version('1.25')
 class SecretAPITest(BaseAPIIntegrationTest):
     def setUp(self):
